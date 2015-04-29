@@ -162,7 +162,7 @@ ALPN‚Å‚ÍAƒNƒ‰ƒCƒAƒ“ƒg‚ÍƒTƒ|[ƒg‚·‚éƒAƒvƒŠƒP[ƒVƒ‡ƒ“ƒvƒƒgƒRƒ‹‚ÌƒŠƒXƒg‚ðTLS‚ÌCli
 
 
 ###<a name ="pro-selection"> 3.2</a>. ƒvƒƒgƒRƒ‹‚Ì‘I‘ð
-ƒT[ƒo‚Í—Dæ‡H‚ÅƒTƒ|[ƒg‚·‚éƒvƒƒgƒRƒ‹‚ÌƒŠƒXƒg‚ðŽ‚Â‚±‚Æ‚ðŠú‘Ò‚³‚êAƒNƒ‰ƒCƒAƒ“ƒg‚ªƒTƒ|[ƒg‚·‚é1‚Â‚ÌƒvƒƒgƒRƒ‹‚ª‘I‚Î‚ê‚éB
+ƒT[ƒo‚Í—Dæ‡‚ÅƒTƒ|[ƒg‚·‚éƒvƒƒgƒRƒ‹‚ÌƒŠƒXƒg‚ðŽ‚Â‚±‚Æ‚ðŠú‘Ò‚³‚êAƒNƒ‰ƒCƒAƒ“ƒg‚ªƒTƒ|[ƒg‚·‚é1‚Â‚ÌƒvƒƒgƒRƒ‹‚ª‘I‚Î‚ê‚éB
 ‚»‚Ìê‡AƒT[ƒo‚ÍƒNƒ‰ƒCƒAƒ“ƒg‚©‚ç’ñŽ¦‚³‚ê‚½ƒŠƒXƒg‚Ì’†‚ÅƒTƒ|[ƒg‚·‚éˆê”Ô—Dæ“x‚Ì‚‚¢ƒvƒƒgƒRƒ‹‚ð‘I‘ð‚·‚é‚×‚«‚Å‚ ‚é(SHOULD)B
 ƒNƒ‰ƒCƒAƒ“ƒg‚ª’ñŽ¦‚µ‚½ƒvƒƒgƒRƒ‹‚ðƒT[ƒo‚ª1‚Â‚àƒTƒ|[ƒg‚µ‚È‚¢ê‡AƒT[ƒo‚Í`"no_application_protocol"`‚ÌƒtƒFƒCƒ^ƒ‹ƒAƒ‰[ƒg‚Å‰ž“š‚·‚é(SHALL)B
 
@@ -173,15 +173,15 @@ ALPN‚Å‚ÍAƒNƒ‰ƒCƒAƒ“ƒg‚ÍƒTƒ|[ƒg‚·‚éƒAƒvƒŠƒP[ƒVƒ‡ƒ“ƒvƒƒgƒRƒ‹‚ÌƒŠƒXƒg‚ðTLS‚ÌCli
     } AlertDescription;
 
 
-ServerHello“à‚Ì`"application_layer_protocol_negotiation"`Šg’£ƒ^ƒCƒv‚É‚ ‚éŠm’è‚µ‚½HƒvƒƒgƒRƒ‹‚ÍÄ‚ÑŒðÂ‚³‚ê‚é‚Ü‚ÅƒRƒlƒNƒVƒ‡ƒ“‚Åˆê”ÔM—Š‚Å‚«‚é(SHALL)B
+ServerHello“à‚Ì`"application_layer_protocol_negotiation"`Šg’£ƒ^ƒCƒv‚É‚ ‚éŠÖŒW‚µ‚½ƒvƒƒgƒRƒ‹‚ÍÄ‚ÑŒðÂ‚³‚ê‚é‚Ü‚ÅƒRƒlƒNƒVƒ‡ƒ“‚Åˆê”ÔM—Š‚Å‚«‚é(SHALL)B
 ƒT[ƒo‚Í‘I‘ð‚³‚ê‚½ƒvƒƒgƒRƒ‹‚É‰ž“š‚µ‚È‚¢‚µAŒã‚ÉƒAƒvƒŠƒP[ƒVƒ‡ƒ“ƒf[ƒ^‚ÌŒðŠ·‚Éˆá‚¤ƒvƒƒgƒRƒ‹‚ðŽg‚¤‚±‚Æ‚à‚È‚¢(SHALL NOT)B
 
 
 ##<a name ="design"> 4</a>. ƒfƒUƒCƒ“‚Ìl—¶
 ALPNŠg’£‚ÍTLSƒvƒƒgƒRƒ‹Šg’£‚Ì‘ã•\“I‚ÈƒfƒUƒCƒ“‚É’Ç]‚·‚é‚æ‚¤ˆÓ}‚³‚ê‚Ä‚¢‚éB
 “Á‚ÉAŒðÂ‚ÍŠm—§‚³‚ê‚½TLSƒA[ƒLƒeƒNƒ`ƒƒ‚É]‚Á‚½ƒNƒ‰ƒCƒAƒ“ƒg/ƒT[ƒo‚ÌhelloŒðŠ·“à‚ÅŠ®‘S‚És‚í‚ê‚éB
-`"appliation_layer_protocol_negotiation"`‚ÌServerHelloŠg’£‚ÍƒRƒlƒNƒVƒ‡ƒ“‚Éˆê”ÔM—Š‚Å‚«‚é‚à‚Ì‚Æ‚³‚êiƒRƒlƒNƒVƒ‡ƒ“‚ªÄŒðÂ‚³‚ê‚é‚Ü‚ÅjATCP‚à‚µ‚­‚ÍUDPƒ|[ƒg”Ô†‚ª‚»‚ÌƒRƒlƒNƒVƒ‡ƒ“ã‚Å—p‚¢‚ç‚ê‚éƒAƒvƒŠƒP[ƒVƒ‡ƒ“‘wƒvƒƒgƒRƒ‹‚Åˆê”ÔM—Š‚Å‚«‚È‚¢Žž‚ÉAƒlƒbƒgƒ[ƒN—v‘f(elementsH)‚ªƒRƒlƒNƒVƒ‡ƒ“‚Ì‹æ•Ê‚³‚ê‚½ƒT[ƒrƒX‚ð’ñ‹Ÿ‚·‚é‚±‚Æ‚ð‹–‚·B
-ƒvƒƒgƒRƒ‹‘I‘ð‚ÌŠ—LŒ ‚ðƒT[ƒo‚É’u‚­‚±‚Æ‚ÅAALPN‚ÍØ–¾‘I‘ð‚à‚µ‚­‚ÍƒRƒlƒNƒVƒ‡ƒ“ƒ‹[ƒeƒBƒ“ƒO‚ªŒðÂ‚³‚ê‚½ƒvƒƒgƒRƒ‹‚ÉˆË‚é‚©‚à‚µ‚ê‚È‚¢ƒVƒiƒŠƒI‚ð—eˆÕH‚É‚·‚é
+`"appliation_layer_protocol_negotiation"`‚ÌServerHelloŠg’£‚ÍiƒRƒlƒNƒVƒ‡ƒ“‚ªÄŒðÂ‚³‚ê‚é‚Ü‚ÅjƒRƒlƒNƒVƒ‡ƒ“‚Éˆê”ÔM—Š‚Å‚«‚é‚à‚Ì‚Æ‚³‚êATCP‚à‚µ‚­‚ÍUDPƒ|[ƒg”Ô†‚ª‚»‚ÌƒRƒlƒNƒVƒ‡ƒ“ã‚Å—p‚¢‚ç‚ê‚éƒAƒvƒŠƒP[ƒVƒ‡ƒ“‘wƒvƒƒgƒRƒ‹‚Åˆê”ÔM—Š‚Å‚«‚È‚¢Žž‚ÉAƒlƒbƒgƒ[ƒN—v‘f‚ªƒRƒlƒNƒVƒ‡ƒ“‚É‹æ•Ê‚³‚ê‚½ƒT[ƒrƒX‚ð’ñ‹Ÿ‚·‚é‚±‚Æ‚ð‹–‰Â‚·‚½‚ß‚ÉƒvƒŒ[ƒ“ƒeƒLƒXƒg‚Å‘—‚ç‚ê‚éB
+ƒvƒƒgƒRƒ‹‘I‘ð‚ÌŠ—LŒ ‚ðƒT[ƒo‚É’u‚­‚±‚Æ‚ÅAALPN‚ÍØ–¾‘I‘ð‚à‚µ‚­‚ÍƒRƒlƒNƒVƒ‡ƒ“ƒ‹[ƒeƒBƒ“ƒO‚ªŒðÂ‚³‚ê‚½ƒvƒƒgƒRƒ‹‚É‚æ‚éƒVƒiƒŠƒI‚ð‰~ŠŠ‚É‚·‚éB
 
 
 ÅI“I‚ÉAƒnƒ“ƒhƒVƒFƒCƒN‚Ìˆê•”‚Æ‚µ‚Ä•½•¶‚ÅƒvƒƒgƒRƒ‹‘I‘ð‚ðs‚¤‚±‚Æ‚ÅAALPNƒRƒlƒNƒVƒ‡ƒ“‚ÌŠm—§‚Éæ—§‚Á‚ÄŒðÂ‚³‚ê‚½ƒvƒƒgƒRƒ‹‚Ì‰B•Á”\—Í‚ÉŠÖ‚µ‚Äª‹’‚È‚«Ž©M‚ðŽæ‚è“ü‚ê‚éŽ–‚ð”ð‚¯‚éB
@@ -198,7 +198,7 @@ ALPN‚ÍTLSƒRƒlƒNƒVƒ‡ƒ“‚ÆŒ‹‚Ñ•t‚¯‚ç‚ê‚½ƒAƒvƒŠƒP[ƒVƒ‡ƒ“‘wƒvƒƒgƒRƒ‹‚ÌŠO“I‚È‰ÂŽ‹ƒ}
 ‚Ü‚½AÅ’á‚Å‚àæ10”N‚Ù‚Ç‚Íƒuƒ‰ƒEƒU‚ªÅ‰‚ÌClientHello‚Å‚±‚ê‚ç‘Šú‚ÌTLS‚ð•’Ê‚ÉŽg‚¤Ž–‚ðl—¶‚·‚×‚«‚¾B
 
 
-‚»‚Ì‚æ‚¤‚ÈŽ¯•ÊŽq‚ªŒÂl‚ð“Á’è‚Å‚«‚éî•ñ‚ð˜R‚ç‚·‚©‚à‚µ‚ê‚È‚¢ŽžA‚à‚µ‚­‚Í‚»‚Ìî•ñ˜R‰k‚Ì‰Â”\«‚ª‚ ‚éŽ¯•ÊŽq‚ªƒvƒƒtƒ@ƒCƒŠƒ“ƒOH‚ðˆø‚«‹N‚±‚·‚©A‹É”é‚Ìî•ñ‚ð˜R‚ç‚·ŽžA’ˆÓ‚ª•¥‚í‚ê‚È‚¯‚ê‚Î‚È‚ç‚È‚¢B
+‚»‚Ì‚æ‚¤‚ÈŽ¯•ÊŽq‚ªŒÂl‚ð“Á’è‚Å‚«‚éî•ñ‚ð˜R‚ç‚·‚©‚à‚µ‚ê‚È‚¢ŽžA‚à‚µ‚­‚Í‚»‚Ìî•ñ˜R‰k‚Ì‰Â”\«‚ª‚ ‚éŽ¯•ÊŽq‚ªŒÂl‚Ì“¯’è‚ðˆø‚«‹N‚±‚·‚©A‹É”é‚Ìî•ñ‚ð˜R‚ç‚·ŽžA’ˆÓ‚ª•¥‚í‚ê‚È‚¯‚ê‚Î‚È‚ç‚È‚¢B
 ‚à‚µ‚»‚Ì‚æ‚¤‚ÈŽ¯•ÊŽq‚ª‚±‚ÌV‚µ‚¢ƒvƒƒgƒRƒ‹Ž¯•ÊŽq‚ð‰ž—p‚·‚é‚È‚çA‚»‚ÌŽ¯•ÊŽq‚Í•½•¶‚Å“Ç‚ß‚é‚©‚à‚µ‚ê‚È‚¢TLS‚ÌÝ’è‚ÅŽg‚í‚ê‚é‚×‚«‚Å‚È‚¢(SHOULD NOT)B
 ‚»‚µ‚Ä‚»‚Ì‚æ‚¤‚ÈƒvƒƒgƒRƒ‹Ž¯•ÊŽq‚É‚Â‚¢‚Äq‚×‚Ä‚¢‚é•¶Í‚Í‚»‚Ì‚æ‚¤‚ÈˆÀ‘S‚Å‚È‚¢Žd—l‚ð”ñ„§‚·‚×‚«‚Å‚ ‚é(SHOULD)B
 
