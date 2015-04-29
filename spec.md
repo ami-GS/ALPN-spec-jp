@@ -9,11 +9,13 @@
 ```
 
 
-Internet Engineering Task Force (IETF)					•ÒW@S.Friedl  Cisco Systems, Inc.
-Request for Comments: 7301		 			 	  			  A. Popov  Microsoft Corp.
-•ª—Ş: Standards Track										  A. Langley  Google Inc.
-ISSN: 2070-1721												  E. Stephan  Orange
-	  													”­s  2014”N7Œ
+    Internet Engineering Task Force (IETF)					•ÒW@S.Friedl  Cisco Systems, Inc.
+    Request for Comments: 7301		 			 	  			  A. Popov  Microsoft Corp.
+    •ª—Ş: Standards Track										  A. Langley  Google Inc.
+    ISSN: 2070-1721												  E. Stephan  Orange
+	      													”­s  2014”N7Œ
+
+
 -----
 
 
@@ -46,20 +48,20 @@ described in the Simplified BSD License.
 
 ##–ÚŸ
 
-### [1](#intro).“±“ü
-### [2](#req-language).—pŒê
-### [3](#ALPN).ƒAƒvƒŠƒP[ƒVƒ‡ƒ“‘wƒvƒƒgƒRƒ‹ŒğÂ
-#### [3.1](#ALPN-E).ƒAƒvƒŠƒP[ƒVƒ‡ƒ“‘wƒvƒƒgƒRƒ‹ŒğÂŠg’£
-#### [3.2](#pro-selection).ƒvƒƒgƒRƒ‹‚Ì‘I‘ğ
-### [4](#design).ƒfƒUƒCƒ“‚Ìl—¶
-### [5](#security).ƒZƒLƒ…ƒŠƒeƒB‚Ìl—¶
-### [6](#IANA).IANA‚Ìl—¶
-### [7](#acknowledge).Ó«
-### [8](#reference).Ql•¶Œ£
-#### [8.1](#normative-ref).ˆø—p•¶‘
-#### [8.2](#informative-ref).Ql•¶‘
+##### [1](#intro).“±“ü
+##### [2](#req-language).—pŒê
+##### [3](#ALPN).ƒAƒvƒŠƒP[ƒVƒ‡ƒ“‘wƒvƒƒgƒRƒ‹ŒğÂ
+###### [3.1](#ALPN-E).ƒAƒvƒŠƒP[ƒVƒ‡ƒ“‘wƒvƒƒgƒRƒ‹ŒğÂŠg’£
+###### [3.2](#pro-selection).ƒvƒƒgƒRƒ‹‚Ì‘I‘ğ
+##### [4](#design).ƒfƒUƒCƒ“‚Ìl—¶
+##### [5](#security).ƒZƒLƒ…ƒŠƒeƒB‚Ìl—¶
+##### [6](#IANA).IANA‚Ìl—¶
+##### [7](#acknowledge).Ó«
+##### [8](#reference).Ql•¶Œ£
+###### [8.1](#normative-ref).ˆø—p•¶‘
+###### [8.2](#informative-ref).Ql•¶‘
 
-##<a name = "intro"> 1.“±“ü
+##<a name = "intro"> 1</a>.“±“ü
 TLSƒvƒƒgƒRƒ‹[RFC5246](https://tools.ietf.org/html/rfc5246)‚Í‚Ü‚·‚Ü‚·ƒAƒvƒŠƒP[ƒVƒ‡ƒ“‘w‚ÌƒvƒƒgƒRƒ‹‚ğ“à•ï‚µ‚Ä‚¢‚éB
 ‚±‚Ì“à•ï‚ÍAƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚É443”Ôƒ|[ƒg‚É‘¶İ‚·‚é‰¼‘z“I‚É‚·‚×‚Ä‚ÌƒOƒ[ƒoƒ‹IPŠî”Â‚ğ’´‚¦‚½ˆÀ‘S‚ÈŒo˜H‚ğg—p‰Â”\‚É‚·‚éB
 
@@ -73,13 +75,13 @@ TLSƒvƒƒgƒRƒ‹[RFC5246](https://tools.ietf.org/html/rfc5246)‚Í‚Ü‚·‚Ü‚·ƒAƒvƒŠƒP[ƒ
 
 ALPN‚Å‚ÍAƒNƒ‰ƒCƒAƒ“ƒg‚ÍƒTƒ|[ƒg‚·‚éƒAƒvƒŠƒP[ƒVƒ‡ƒ“ƒvƒƒgƒRƒ‹‚ÌƒŠƒXƒg‚ğTLS‚ÌClientHelloƒƒbƒZ[ƒW‚Ìˆê•”‚Æ‚µ‚Ä‘—M‚·‚éB
 ƒT[ƒo‚ÍƒvƒƒgƒRƒ‹‚ğ‚P‚Â‘I‚ÑATLS‚ÌServerHelloƒƒbƒZ[ƒW‚Ìˆê•”‚Æ‚µ‚Ä‘—M‚·‚éB
-ƒAƒvƒŠƒP[ƒVƒ‡ƒ“ƒvƒƒgƒRƒ‹‚ÌŒğÂ‚Í‚±‚Ì‚æ‚¤‚ÉTLSƒnƒ“ƒhƒVƒFƒCƒNã‚ÅAƒlƒbƒgƒ[ƒNƒ‰ƒEƒ“ƒhƒgƒŠƒbƒv‚ğ’Ç‰Á‚·‚é‚±‚Æ–³‚­Š®—¹‚³‚ê‚éB‚»‚µ‚Ä‚±‚ÌŒğÂ‚ÍA(—v‹‚ª‚ ‚ê‚Î)ƒT[ƒo‚É‚»‚ê‚¼‚ê‚ÌƒvƒƒgƒRƒ‹‚Æ•ÊX‚ÌØ–¾‘‚ğ‘Î‰•t‚¯‚³‚¹‚é‚é–‚ª‰Â”\B
+ƒAƒvƒŠƒP[ƒVƒ‡ƒ“ƒvƒƒgƒRƒ‹‚ÌŒğÂ‚Í‚±‚Ì‚æ‚¤‚ÉTLSƒnƒ“ƒhƒVƒFƒCƒNã‚ÅAƒlƒbƒgƒ[ƒNƒ‰ƒEƒ“ƒhƒgƒŠƒbƒv‚ğ’Ç‰Á‚·‚é‚±‚Æ–³‚­Š®—¹‚³‚ê‚éB‚»‚µ‚Ä‚±‚ÌŒğÂ‚ÍA(—v‹‚ª‚ ‚ê‚Î)ƒT[ƒo‚É‚»‚ê‚¼‚ê‚ÌƒvƒƒgƒRƒ‹‚Æ•ÊX‚ÌØ–¾‘‚ğ‘Î‰•t‚¯‚³‚¹‚é–‚ª‰Â”\B
 
-##<a name ="req-language"> 2.—pŒê
+##<a name ="req-language"> 2</a>.—pŒê
 ‚±‚Ì•¶Í‚É‚¨‚¢‚ÄAƒL[ƒ[ƒh"MUST"A"MUST NOT"A"REQUIRED"A"SHALL"A"SHALL NOT"A"SHOULD"A"SHOULD NOT"A"RECOMMENDED"A"MAY"A‚»‚µ‚Ä "OPTIONAL"‚Í[RFC2119](https://tools.ietf.org/html/rfc2119)‚É•\‹L‚³‚ê‚é‚æ‚¤‚É‰ğß‚³‚ê‚éB
 
-##<a name ="ALPN"> 3.ƒAƒvƒŠƒP[ƒVƒ‡ƒ“‘wƒvƒƒgƒRƒ‹ŒğÂ
-###<a name ="ALPN-E"> 3.1. ƒAƒvƒŠƒP[ƒVƒ‡ƒ“‘wƒvƒƒgƒRƒ‹ŒğÂŠg’£
+##<a name ="ALPN"> 3</a>.ƒAƒvƒŠƒP[ƒVƒ‡ƒ“‘wƒvƒƒgƒRƒ‹ŒğÂ
+###<a name ="ALPN-E"> 3.1</a>. ƒAƒvƒŠƒP[ƒVƒ‡ƒ“‘wƒvƒƒgƒRƒ‹ŒğÂŠg’£
 `("application_layer_protocol(16)")`Œ^‚ÌV‚µ‚¢Šg’£‚ª’è‹`‚³‚êAƒNƒ‰ƒCƒAƒ“ƒg‘¤‚Ì"ClientHello"ƒƒbƒZ[ƒW‚ÉŠÜ‚Ü‚ê‚Ä‚à—Ç‚¢(MAY)B
 
 
@@ -112,46 +114,46 @@ ALPN‚Å‚ÍAƒNƒ‰ƒCƒAƒ“ƒg‚ÍƒTƒ|[ƒg‚·‚éƒAƒvƒŠƒP[ƒVƒ‡ƒ“ƒvƒƒgƒRƒ‹‚ÌƒŠƒXƒg‚ğTLS‚ÌCli
 ]‚Á‚ÄAClientHello‚ÆServerHelloƒƒbƒZ[ƒW“à‚Ì`"application_layer_protocol_nagotiation"`Šg’£‚ğ‚ÂŠ®‘S‚Èƒnƒ“ƒhƒVƒFƒCƒN‚ÍŸ‚Ì—¬‚ê‚ğs‚¤([[RFC5246]7.3ß](https://tools.ietf.org/html/rfc5246#section-7.3)‚Æ‘ÎÆ“I‚É)
 
 
-Client															Server
-
-ClientHello								-------->		ServerHello
-(ALPN extension & list of protocols)					(ALPN extension & selected protocol)
-
-		  	   	  										Certificate*
-														ServerKeyExchange*
-														CertificateRequese*
-										<--------		ServerHelloDone
-
-Certificate*
-ClientKeyExchange
-CertificateVerify*
-[ChangeCipherSpec]
-Finished								-------->
-														[ChangeCipherSpec]
-														Finished
-
-Application Data						<------->		Application Data
-
-								Figure 1
+    Client															Server
+	
+    ClientHello								-------->		ServerHello
+    (ALPN extension & list of protocols)					(ALPN extension & selected protocol)
+    
+    		  	   	  										Certificate*
+    														ServerKeyExchange*
+	    													CertificateRequese*
+    										<--------		ServerHelloDone
+    
+    Certificate*
+    ClientKeyExchange
+    CertificateVerify*
+    [ChangeCipherSpec]
+    Finished								-------->
+    														[ChangeCipherSpec]
+    														Finished
+    
+    Application Data						<------->		Application Data
+    
+    								Figure 1
 
 *‚ÍƒIƒvƒVƒ‡ƒ“‚à‚µ‚­‚Íó‹µ‚É‚æ‚éƒƒbƒZ[ƒW‚Å‚ ‚èAí‚É‘—‚ç‚ê‚é‚í‚¯‚Å‚Í‚È‚¢B
 
 
 `"application_layer_protocol_negotiation"`Šg’£‚ÍÈ—ª‚³‚ê‚½ƒnƒ“ƒhƒVƒFƒCƒNŸ‚Ì‚æ‚¤‚É‚È‚éB
 
-Client															Server
-
-ClientHello								-------->		ServerHello
-(ALPN extension & list of protocols)					(ALPN extension & selected protocol)
-
-														[ChangeCipherSpec]
-										<--------		Finished
-[ChangeCipherSpec]
-Finished								-------->
-
-Application Data						<------->		Application Data
-
-								Figure 2
+    Client															Server
+    
+    ClientHello								-------->		ServerHello
+    (ALPN extension & list of protocols)					(ALPN extension & selected protocol)
+    
+    														[ChangeCipherSpec]
+    										<--------		Finished
+    [ChangeCipherSpec]
+    Finished								-------->
+    
+    Application Data						<------->		Application Data
+    
+    								Figure 2
 
 
 ‚Ù‚©‘½”‚ÌTLSŠg’£‚Æˆá‚¢A‚±‚ê‚ÍƒRƒlƒNƒVƒ‡ƒ“‚¾‚¯‚ÌƒZƒbƒVƒ‡ƒ“‚ÌƒvƒƒpƒeƒB‚ğŠm—§‚µ‚È‚¢B
@@ -159,7 +161,7 @@ Application Data						<------->		Application Data
 ‚»‚µ‚ÄV‚½‚Èƒnƒ“ƒhƒVƒFƒCƒNƒƒbƒZ[ƒW‚Ì’l‚Ì‚İ‚ªl—¶‚³‚ê‚é
 
 
-###<a name ="pro-selection"> 3.2. ƒvƒƒgƒRƒ‹‚Ì‘I‘ğ
+###<a name ="pro-selection"> 3.2</a>. ƒvƒƒgƒRƒ‹‚Ì‘I‘ğ
 ƒT[ƒo‚Í—Dæ‡H‚ÅƒTƒ|[ƒg‚·‚éƒvƒƒgƒRƒ‹‚ÌƒŠƒXƒg‚ğ‚Â‚±‚Æ‚ğŠú‘Ò‚³‚êAƒNƒ‰ƒCƒAƒ“ƒg‚ªƒTƒ|[ƒg‚·‚é1‚Â‚ÌƒvƒƒgƒRƒ‹‚ª‘I‚Î‚ê‚éB
 ‚»‚Ìê‡AƒT[ƒo‚ÍƒNƒ‰ƒCƒAƒ“ƒg‚©‚ç’ñ¦‚³‚ê‚½ƒŠƒXƒg‚Ì’†‚ÅƒTƒ|[ƒg‚·‚éˆê”Ô—Dæ“x‚Ì‚‚¢ƒvƒƒgƒRƒ‹‚ğ‘I‘ğ‚·‚é‚×‚«‚Å‚ ‚é(SHOULD)B
 ƒNƒ‰ƒCƒAƒ“ƒg‚ª’ñ¦‚µ‚½ƒvƒƒgƒRƒ‹‚ğƒT[ƒo‚ª1‚Â‚àƒTƒ|[ƒg‚µ‚È‚¢ê‡AƒT[ƒo‚Í`"no_application_protocol"`‚ÌƒtƒFƒCƒ^ƒ‹ƒAƒ‰[ƒg‚Å‰“š‚·‚é(SHALL)B
@@ -175,7 +177,7 @@ ServerHello“à‚Ì`"application_layer_protocol_negotiation"`Šg’£ƒ^ƒCƒv‚É‚ ‚éŠm’è‚µ‚
 ƒT[ƒo‚Í‘I‘ğ‚³‚ê‚½ƒvƒƒgƒRƒ‹‚É‰“š‚µ‚È‚¢‚µAŒã‚ÉƒAƒvƒŠƒP[ƒVƒ‡ƒ“ƒf[ƒ^‚ÌŒğŠ·‚Éˆá‚¤ƒvƒƒgƒRƒ‹‚ğg‚¤‚±‚Æ‚à‚È‚¢(SHALL NOT)B
 
 
-##<a name ="design"> 4. ƒfƒUƒCƒ“‚Ìl—¶
+##<a name ="design"> 4</a>. ƒfƒUƒCƒ“‚Ìl—¶
 ALPNŠg’£‚ÍTLSƒvƒƒgƒRƒ‹Šg’£‚Ì‘ã•\“I‚ÈƒfƒUƒCƒ“‚É’Ç]‚·‚é‚æ‚¤ˆÓ}‚³‚ê‚Ä‚¢‚éB
 “Á‚ÉAŒğÂ‚ÍŠm—§‚³‚ê‚½TLSƒA[ƒLƒeƒNƒ`ƒƒ‚É]‚Á‚½ƒNƒ‰ƒCƒAƒ“ƒg/ƒT[ƒo‚ÌhelloŒğŠ·“à‚ÅŠ®‘S‚És‚í‚ê‚éB
 `"appliation_layer_protocol_negotiation"`‚ÌServerHelloŠg’£‚ÍƒRƒlƒNƒVƒ‡ƒ“‚Éˆê”ÔM—Š‚Å‚«‚é‚à‚Ì‚Æ‚³‚êiƒRƒlƒNƒVƒ‡ƒ“‚ªÄŒğÂ‚³‚ê‚é‚Ü‚ÅjATCP‚à‚µ‚­‚ÍUDPƒ|[ƒg”Ô†‚ª‚»‚ÌƒRƒlƒNƒVƒ‡ƒ“ã‚Å—p‚¢‚ç‚ê‚éƒAƒvƒŠƒP[ƒVƒ‡ƒ“‘wƒvƒƒgƒRƒ‹‚Åˆê”ÔM—Š‚Å‚«‚È‚¢‚ÉAƒlƒbƒgƒ[ƒN—v‘f(elementsH)‚ªƒRƒlƒNƒVƒ‡ƒ“‚Ì‹æ•Ê‚³‚ê‚½ƒT[ƒrƒX‚ğ’ñ‹Ÿ‚·‚é‚±‚Æ‚ğ‹–‚·B
@@ -186,7 +188,7 @@ ALPNŠg’£‚ÍTLSƒvƒƒgƒRƒ‹Šg’£‚Ì‘ã•\“I‚ÈƒfƒUƒCƒ“‚É’Ç]‚·‚é‚æ‚¤ˆÓ}‚³‚ê‚Ä‚¢‚éB
 ‚à‚µƒvƒƒgƒRƒ‹‚Ì‰B•Á‚ª•K—v‚Å‚ ‚ê‚ÎA^‚ÌTLSƒZƒLƒ…ƒŠƒeƒB•ÛØ‚Ìˆ×‚ÉƒRƒlƒNƒVƒ‡ƒ“Šm—§‚ÌŒã‚ÉÄŒğÂ‚·‚é‚Ì‚ªD‚Ü‚µ‚¢è‡‚¾‚ë‚¤B
 
 
-##<a name ="security"> 5. ƒZƒLƒ…ƒŠƒeƒB‚Ìl—¶
+##<a name ="security"> 5</a>. ƒZƒLƒ…ƒŠƒeƒB‚Ìl—¶
 ALPNŠg’£‚ÍTLS‚ÌƒZƒbƒVƒ‡ƒ“Šm—§‚à‚µ‚­‚ÍƒAƒvƒŠƒP[ƒVƒ‡ƒ“ƒf[ƒ^‚ÌŒğŠ·‚ÉƒZƒLƒ…ƒŠƒeƒB‚É‰e‹¿‚ğ—^‚¦‚È‚¢B
 ALPN‚ÍTLSƒRƒlƒNƒVƒ‡ƒ“‚ÆŒ‹‚Ñ•t‚¯‚ç‚ê‚½ƒAƒvƒŠƒP[ƒVƒ‡ƒ“‘wƒvƒƒgƒRƒ‹‚ÌŠO“I‚È‰Â‹ƒ}[ƒN‚ğ’ñ‹Ÿ‚·‚é–ğŠ„‚ğ‰Ê‚½‚·B
 —ğj“I‚ÉAƒRƒlƒNƒVƒ‡ƒ“‚ÆŒ‹‚Ñ•t‚¯‚ç‚ê‚½ƒAƒvƒŠƒP[ƒVƒ‡ƒ“‘wƒvƒƒgƒRƒ‹‚ÍTCP‚à‚µ‚­‚ÍUDP‚Åg‚í‚ê‚éƒ|[ƒg”Ô†‚©‚çŠm‚©‚ß‚ç‚ê‚é‚¾‚ë‚¤B
@@ -201,7 +203,7 @@ ALPN‚ÍTLSƒRƒlƒNƒVƒ‡ƒ“‚ÆŒ‹‚Ñ•t‚¯‚ç‚ê‚½ƒAƒvƒŠƒP[ƒVƒ‡ƒ“‘wƒvƒƒgƒRƒ‹‚ÌŠO“I‚È‰Â‹ƒ}
 ‚»‚µ‚Ä‚»‚Ì‚æ‚¤‚ÈƒvƒƒgƒRƒ‹¯•Êq‚É‚Â‚¢‚Äq‚×‚Ä‚¢‚é•¶Í‚Í‚»‚Ì‚æ‚¤‚ÈˆÀ‘S‚Å‚È‚¢d—l‚ğ”ñ„§‚·‚×‚«‚Å‚ ‚é(SHOULD)B
 
 
-##<a name ="IANA"> 6. IANA‚Ìl—¶
+##<a name ="IANA"> 6</a>. IANA‚Ìl—¶
 IANA‚Í"ExtensionType Values"ƒŒƒWƒXƒgƒŠ‚ÍŸ‚ÌƒGƒ“ƒgƒŠ‚ğŠÜ‚ß‚é‚½‚ß‚ÉƒAƒbƒvƒf[ƒg‚µ‚½B
 
 
@@ -246,12 +248,12 @@ IANA‚Í"ExtensionType Values"ƒŒƒWƒXƒgƒŠ‚ÍŸ‚ÌƒGƒ“ƒgƒŠ‚ğŠÜ‚ß‚é‚½‚ß‚ÉƒAƒbƒvƒf[ƒg‚µ
     Reference: [http://dev.chromium.org/spdy/spdy-protocol/spdy-protocol-draft3](http://dev.chromium.org/spdy/spdy-protocol/spdy-protocol-draft3)
 
 
-##<a name ="acknowledge"> 7. Ó«
+##<a name ="acknowledge"> 7</a>. Ó«
 ‚±‚Ì•¶‘‚ÍANext Protocol Negotiation (NPN)Šg’£‚Ì•¶Í‚É‚Æ‚è‚í‚¯‰¶Œb‚ğó‚¯AAdam Langley‚ÆƒVƒXƒR‚ÌTom WesselmanACullen Jennings‚Æ‚Ì‹c˜_‚É‚æ‚è·•M‚³‚ê‚½B
 
 
-##<a name ="reference"> 8. Ql•¶Œ£
-###<a name ="normative-ref"> 8.1. ˆø—p•¶‘
+##<a name ="reference"> 8</a>. Ql•¶Œ£
+###<a name ="normative-ref"> 8.1</a>. ˆø—p•¶‘
 [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", [BCP 14](https://tools.ietf.org/html/bcp14), [RFC 2119](https://tools.ietf.org/html/rfc2119), March 1997.
 
@@ -272,8 +274,8 @@ IANA‚Í"ExtensionType Values"ƒŒƒWƒXƒgƒŠ‚ÍŸ‚ÌƒGƒ“ƒgƒŠ‚ğŠÜ‚ß‚é‚½‚ß‚ÉƒAƒbƒvƒf[ƒg‚µ
               (HTTP/1.1): Message Syntax and Routing", [RFC 7230](https://tools.ietf.org/html/rfc7230), June 2014.
 
 
-###<a name ="informative-ref"> 8.2. Ql•¶‘
-<a name ="http2">[HTTP2]    Belshe, M., Peon, R., and M. Thomson, "Hypertext Transfer
+###<a name ="informative-ref"> 8.2</a>. Ql•¶‘
+<a name ="http2">[HTTP2]</a>    Belshe, M., Peon, R., and M. Thomson, "Hypertext Transfer
               Protocol version 2", Work in Progress, June 2014.
 
 
