@@ -18,8 +18,7 @@
 -----
 
 
-#Transport Layer Security (TLS)
-Application-Layer Protocol Negotiation Extension
+#Transport Layer Security (TLS) Application-Layer Protocol Negotiation Extension
 
 ### 概要
 この仕様はTLSハンドシェイク上で行われるアプリケーション層のプロトコルネゴシエーションのためのTLS拡張を説明します。
