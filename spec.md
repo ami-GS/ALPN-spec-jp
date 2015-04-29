@@ -1,3 +1,22 @@
+```
+この文章は「Transport Layer Security (TLS) Application-Layer Protocol Negotiation Extension)」の日本語訳です。
+この翻訳の正確性は保証されません。この仕様の公式な文章は英語版であり、この日本語訳は公式のものではありません。
+
+
+公開日:		2015-
+更新日:		2015-
+翻訳者:		Daiki Aminaka <1991.daiki@gmail.com>
+```
+
+
+Internet Engineering Task Force (IETF)					編集　S.Friedl  Cisco Systems, Inc.
+Request for Comments: 7301		 			 	  			  A. Popov  Microsoft Corp.
+分類: Standards Track										  A. Langley  Google Inc.
+ISSN: 2070-1721												  E. Stephan  Orange
+	  													発行  2014年7月
+-----
+
+
 #Transport Layer Security (TLS)
 #Application-Layer Protocol Negotiation Extension
 
@@ -13,7 +32,17 @@
 この文書の現在の位置付け、正誤表、フィードバックの方法についての情報は、[http://www.rfc-editor.org/info/rfc7301](http://www.rfc-editor.org/info/rfc7301)から得られる。
 
 
-###著作権の告知
+###著作権表示
+Copyright (c) 2014 IETF Trust and the persons identified as the document authors.  All rights reserved.
+
+This document is subject to [BCP 78](https://tools.ietf.org/html/bcp78) and the IETF Trust's Legal
+Provisions Relating to IETF Documents ([http://trustee.ietf.org/license-info](http://trustee.ietf.org/license-info)) in effect on the date of
+publication of this document.  Please review these documents
+carefully, as they describe your rights and restrictions with respect
+to this document.  Code Components extracted from this document must
+include Simplified BSD License text as described in [Section 4](#design).e of
+the Trust Legal Provisions and are provided without warranty as
+described in the Simplified BSD License.
 
 ##目次
 
@@ -31,16 +60,15 @@
 #### [8.2](#informative-ref).参考文書
 
 ##<a name = "intro"> 1.導入
-TLSプロトコル[RFC5246](https://tools.ietf.org/html/rfc5246)はますますアプリケーション層のプロトコルを内包している
-この内包は、？？？443番ポートにすでに存在するアプリケーションに安全な経路を使用可能にする。
-
+TLSプロトコル[RFC5246](https://tools.ietf.org/html/rfc5246)はますますアプリケーション層のプロトコルを内包している。
+この内包は、アプリケーションに443番ポートに存在する仮想的にすべてのグローバルIP基板を超えた安全な経路を使用可能にする。
 
 一つのサーバ側ポート(例えば443番)にて複数のアプリケーションプロトコルがサポートされている時、クライアントとサーバはコネクションごとに使用するアプリケーションプロトコルを交渉する必要がある。
-クライアント-サーバ間のネットワークラウンドトリップ加えることなしにこの交渉を完了することが好ましい。それぞれのラウンドトリップはエンドユーザのexperienceを下げるように。
+それぞれのラウンドトリップがエンドユーザの経験を下げるように、クライアント-サーバ間のネットワークラウンドトリップを加えることなく、この交渉を完了することが好ましい。
 さらにそれは選ばれたアプリケーションプロトコルに基づいた証明書選択を可能にする事に有益だろう。
 
 この文書はアプリケーション層がTLSハンドシェイク上でプロトコルの選択を可能にする拡張を説明する。
-この動きはHTTPbis WGにて、TLS上のHTTP2([[HTTP2](https://tools.ietf.org/html/rfc7301#ref-HTTP2)])の使用交渉に取り組むために要求されたことである。
+この動きはHTTPbis WGにて、TLS上のHTTP2([[HTTP2](#http2)])の使用交渉に取り組むために要求されたことである。
 しかしながら、ALPNは任意のアプリケーション層のプロトコル交渉を容易にする。
 
 ALPNでは、クライアントはサポートするアプリケーションプロトコルのリストをTLSのClientHelloメッセージの一部として送信する。
@@ -71,52 +99,70 @@ ALPNでは、クライアントはサポートするアプリケーションプロトコルのリストをTLSのCli
     } ProtocolNameList;
 
 
-`"ProtocolNameList"`はクライアントから告知されたプロトコルのリスト(好みの降順？)を含む。
-プロトコルは[６節](#IANA)("IANAの考慮")にて詳細に説明されているように、IANA-registeredにおいて名前付けられ、opaqueで空でないバイト文字列である。
+`"ProtocolNameList"`はクライアントから告知された好みの降順のプロトコルのリストを含む。
+プロトコルは[６節](#IANA)("IANAの考慮")にて詳細に説明されているように、IANA-registeredにおいて名前付けられ、不明瞭で、空でないバイト文字列である。
 空の文字列は含まれるべきでなく、さらにバイト文字列は切り詰められるべきでない。
 
-`"application_layer_protocol_nagotiation"`拡張を含むClientHelloを受け取るサーバは、適切に選ばれたプロトコルを含むレスポンスを返して良い(MAY)。
+`"application_layer_protocol_nagotiation"`拡張を含むClientHelloを受け取るサーバは、適切に選ばれたプロトコルを含む応答を返して良い(MAY)。
 サーバは認識できないプロトコル名を無視する。
 `("application_layer_protocol_negotiation(16)")`型のServerHello拡張は拡張されたServerHelloに含まれてクライアントに返されても良い(MAY)。
 `"ProtocolNameList"`は確かに一つの`"ProtocolName"`を含まなければならない(MUST)ことを除き、`("application_layer_protocol_nagotiation(16)")`拡張の`"extension_data"`領域は上記clientの`"extension_data"`と同様に構成される。
 
 
-従って、ClientHelloとServerHelloメッセージ内の`"application_layer_protocol_nagotiation"`拡張を持つ完全なハンドシェイクは次の流れを持つ([[RFC5246]7.3節](https://tools.ietf.org/html/rfc5246#section-7.3)と対比される？？)
+従って、ClientHelloとServerHelloメッセージ内の`"application_layer_protocol_nagotiation"`拡張を持つ完全なハンドシェイクは次の流れを行う([[RFC5246]7.3節](https://tools.ietf.org/html/rfc5246#section-7.3)と対照的に)
 
 
-Client																					Server
+Client															Server
 
-ClientHello												-------->						ServerHello
-(ALPN extension & list of protocols)													(ALPN extension & selected protocol)
+ClientHello								-------->		ServerHello
+(ALPN extension & list of protocols)					(ALPN extension & selected protocol)
 
-	  			  	   	  																Certificate*
-																						ServerKeyExchange*
-																						CertificateRequese*
-														<--------						ServerHelloDone
+		  	   	  										Certificate*
+														ServerKeyExchange*
+														CertificateRequese*
+										<--------		ServerHelloDone
 
 Certificate*
 ClientKeyExchange
 CertificateVerify*
 [ChangeCipherSpec]
-Finished												-------->
-																						[ChangeCipherSpec]
-																						Finished
+Finished								-------->
+														[ChangeCipherSpec]
+														Finished
 
-Application Data										<------->						Application Data
+Application Data						<------->		Application Data
 
-														Figure 1
+								Figure 1
 
 *はオプションもしくは状況によるメッセージであり、常に送られるわけではない。
 
-ほか多数のTLS拡張と違い、これはコネクションのみ？？セッションのプロパティを確立しない。
-セッションの再開もしくはセッションチケット[RFC5077](https://tools.ietf.org/html/rfc5077)が用いられた時、この拡張の以前のコンテンツは無意味である？
+
+`"application_layer_protocol_negotiation"`拡張は省略されたハンドシェイク次のようになる。
+
+Client															Server
+
+ClientHello								-------->		ServerHello
+(ALPN extension & list of protocols)					(ALPN extension & selected protocol)
+
+														[ChangeCipherSpec]
+										<--------		Finished
+[ChangeCipherSpec]
+Finished								-------->
+
+Application Data						<------->		Application Data
+
+								Figure 2
+
+
+ほか多数のTLS拡張と違い、これはコネクションだけのセッションのプロパティを確立しない。
+セッションの再開もしくはセッションチケット[RFC5077](https://tools.ietf.org/html/rfc5077)が用いられた時、この拡張の以前のコンテンツは不適切である。
 そして新たなハンドシェイクメッセージの値のみが考慮される
 
 
 ###<a name ="pro-selection"> 3.2. プロトコルの選択
 サーバは優先順？でサポートするプロトコルのリストを持つことを期待され、クライアントがサポートする1つのプロトコルが選ばれる。
 その場合、サーバはクライアントから提示されたリストの中でサポートする一番優先度の高いプロトコルを選択するべきである(SHOULD)。
-クライアントが提示したプロトコルをサーバが1つもサポートしない場合、サーバは`"no_application_protocol"`のフェイタルアラートでレスポンスする(SHALL)。
+クライアントが提示したプロトコルをサーバが1つもサポートしない場合、サーバは`"no_application_protocol"`のフェイタルアラートで応答する(SHALL)。
 
 
     enum {
@@ -136,13 +182,13 @@ ALPN拡張はTLSプロトコル拡張の代表的なデザインに追従するよう意図されている。
 プロトコル選択の所有権をサーバに置くことで、ALPNは証明選択もしくはコネクションルーティングが交渉されたプロトコルに依るかもしれないシナリオを容易？にする
 
 
-最終的に、ハンドシェイクの一部としてプロトコル選択を平文で行うことで、ALPNコネクションの確立に先立って交渉されたプロトコルの隠蔽能力に関してはfalseな信用を取り入れる事を避ける。？
-もしプロトコルの隠蔽が必要であれば、真のTLSセキュリティ保証の為に再交渉が好ましい手順だろう。
+最終的に、ハンドシェイクの一部として平文でプロトコル選択を行うことで、ALPNコネクションの確立に先立って交渉されたプロトコルの隠蔽能力に関して根拠なき自信を取り入れる事を避ける。
+もしプロトコルの隠蔽が必要であれば、真のTLSセキュリティ保証の為にコネクション確立の後に再交渉するのが好ましい手順だろう。
 
 
 ##<a name ="security"> 5. セキュリティの考慮
 ALPN拡張はTLSのセッション確立もしくはアプリケーションデータの交換にセキュリティに影響を与えない。
-ALPNはTLSコネクションと結び付けられたアプリケーション層プロトコルの外的な可視マーク？を提供する役割を果たす。
+ALPNはTLSコネクションと結び付けられたアプリケーション層プロトコルの外的な可視マークを提供する役割を果たす。
 歴史的に、コネクションと結び付けられたアプリケーション層プロトコルはTCPもしくはUDPで使われるポート番号から確かめられるだろう。
 
 
@@ -174,7 +220,7 @@ IANAは"ExtensionType Values"レジストリは次のエントリを含めるためにアップデートし
 
 
 このレジストリは[RFC5226](https://tools.ietf.org/html/rfc5226)に定義されているように"Expert Review"ポリシーの元で機能している。
-指名されたエキスパートは、特定のプロトコルの互換性のある実装を開発する機会を与える、永久で簡単に手に入る仕様への参照の含有を助成するためにアドバイスを受ける。？
+指名されたエキスパートは、特定のプロトコルの互換性のある実装の開発を可能にする、永久で簡単に手に入る仕様への参照の含有を勧めるよう注意を受けている。
 
 
 このレジストリへの要録の最初の集合は次のようになる。
@@ -227,7 +273,7 @@ IANAは"ExtensionType Values"レジストリは次のエントリを含めるためにアップデートし
 
 
 ###<a name ="informative-ref"> 8.2. 参考文書
-[HTTP2]    Belshe, M., Peon, R., and M. Thomson, "Hypertext Transfer
+<a name ="http2">[HTTP2]    Belshe, M., Peon, R., and M. Thomson, "Hypertext Transfer
               Protocol version 2", Work in Progress, June 2014.
 
 
