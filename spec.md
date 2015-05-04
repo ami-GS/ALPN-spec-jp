@@ -9,10 +9,10 @@
 
 
     Internet Engineering Task Force (IETF)					•ÒW@S.Friedl  Cisco Systems, Inc.
-    Request for Comments: 7301		 			 	  			  A. Popov  Microsoft Corp.
-    •ª—Þ: Standards Track										  A. Langley  Google Inc.
-    ISSN: 2070-1721												  E. Stephan  Orange
-	      													”­s  2014”N7ŒŽ
+    Request for Comments: 7301							      A. Popov  Microsoft Corp.
+    •ª—Þ: Standards Track 							      A. Langley  Google Inc.
+    ISSN: 2070-1721 								      E. Stephan  Orange
+	      									      ”­s  2014”N7ŒŽ
 
 
 -----
@@ -60,8 +60,8 @@ described in the Simplified BSD License.
 ###### [8.2](#informative-ref).ŽQl•¶‘
 
 ##<a name = "intro"> 1</a>.“±“ü
-TLSƒvƒƒgƒRƒ‹[RFC5246](https://tools.ietf.org/html/rfc5246)‚Í‚Ü‚·‚Ü‚·ƒAƒvƒŠƒP[ƒVƒ‡ƒ“‘w‚ÌƒvƒƒgƒRƒ‹‚ð“à•ï‚µ‚Ä‚¢‚éB
-‚±‚Ì“à•ï‚ÍAƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚É443”Ôƒ|[ƒg‚É‘¶Ý‚·‚é‰¼‘z“I‚É‚·‚×‚Ä‚ÌƒOƒ[ƒoƒ‹IPŠî”Â‚ð’´‚¦‚½ˆÀ‘S‚ÈŒo˜H‚ðŽg—p‰Â”\‚É‚·‚éB
+TLSƒvƒƒgƒRƒ‹[[RFC5246](https://tools.ietf.org/html/rfc5246)]‚Í‚Ü‚·‚Ü‚·ƒAƒvƒŠƒP[ƒVƒ‡ƒ“‘w‚ÌƒvƒƒgƒRƒ‹‚ð•ï‚ñ‚Å‚¢‚éB
+‚±‚Ì“à•ï‚É‚æ‚èAƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚Í443”Ôƒ|[ƒg‚ÉŠù‚É‘¶Ý‚·‚éA‰¼‘z“I‚É‘S‚Ä‚ÌƒOƒ[ƒoƒ‹IPŠî”Â‚ð‰z‚¦‚½ˆÀ‘S‚ÈŒo˜H‚ðŽg—p‚Å‚«‚éB
 
 ˆê‚Â‚ÌƒT[ƒo‘¤ƒ|[ƒg(—á‚¦‚Î443”Ô)‚É‚Ä•¡”‚ÌƒAƒvƒŠƒP[ƒVƒ‡ƒ“ƒvƒƒgƒRƒ‹‚ªƒTƒ|[ƒg‚³‚ê‚Ä‚¢‚éŽžAƒNƒ‰ƒCƒAƒ“ƒg‚ÆƒT[ƒo‚ÍƒRƒlƒNƒVƒ‡ƒ“‚²‚Æ‚ÉŽg—p‚·‚éƒAƒvƒŠƒP[ƒVƒ‡ƒ“ƒvƒƒgƒRƒ‹‚ðŒðÂ‚·‚é•K—v‚ª‚ ‚éB
 ‚»‚ê‚¼‚ê‚Ìƒ‰ƒEƒ“ƒhƒgƒŠƒbƒv‚ªƒGƒ“ƒhƒ†[ƒU‚ÌŒoŒ±‚ð‰º‚°‚é‚æ‚¤‚ÉAƒNƒ‰ƒCƒAƒ“ƒg-ƒT[ƒoŠÔ‚Ìƒlƒbƒgƒ[ƒNƒ‰ƒEƒ“ƒhƒgƒŠƒbƒv‚ð‰Á‚¦‚é‚±‚Æ‚È‚­A‚±‚ÌŒðÂ‚ðŠ®—¹‚·‚é‚±‚Æ‚ªD‚Ü‚µ‚¢B
@@ -73,7 +73,7 @@ TLSƒvƒƒgƒRƒ‹[RFC5246](https://tools.ietf.org/html/rfc5246)‚Í‚Ü‚·‚Ü‚·ƒAƒvƒŠƒP[ƒ
 
 ALPN‚Å‚ÍAƒNƒ‰ƒCƒAƒ“ƒg‚ÍƒTƒ|[ƒg‚·‚éƒAƒvƒŠƒP[ƒVƒ‡ƒ“ƒvƒƒgƒRƒ‹‚ÌƒŠƒXƒg‚ðTLS‚ÌClientHelloƒƒbƒZ[ƒW‚Ìˆê•”‚Æ‚µ‚Ä‘—M‚·‚éB
 ƒT[ƒo‚ÍƒvƒƒgƒRƒ‹‚ð‚P‚Â‘I‚ÑATLS‚ÌServerHelloƒƒbƒZ[ƒW‚Ìˆê•”‚Æ‚µ‚Ä‘—M‚·‚éB
-ƒAƒvƒŠƒP[ƒVƒ‡ƒ“ƒvƒƒgƒRƒ‹‚ÌŒðÂ‚Í‚±‚Ì‚æ‚¤‚ÉTLSƒnƒ“ƒhƒVƒFƒCƒNã‚ÅAƒlƒbƒgƒ[ƒNƒ‰ƒEƒ“ƒhƒgƒŠƒbƒv‚ð’Ç‰Á‚·‚é‚±‚Æ–³‚­Š®—¹‚³‚ê‚éB‚»‚µ‚Ä‚±‚ÌŒðÂ‚ÍA(—v‹‚ª‚ ‚ê‚Î)ƒT[ƒo‚É‚»‚ê‚¼‚ê‚ÌƒvƒƒgƒRƒ‹‚Æ•ÊX‚ÌØ–¾‘‚ð‘Î‰ž•t‚¯‚³‚¹‚éŽ–‚ª‰Â”\B
+ƒAƒvƒŠƒP[ƒVƒ‡ƒ“ƒvƒƒgƒRƒ‹‚ÌŒðÂ‚Í‚±‚Ì‚æ‚¤‚ÉTLSƒnƒ“ƒhƒVƒFƒCƒNã‚ÅAƒlƒbƒgƒ[ƒNƒ‰ƒEƒ“ƒhƒgƒŠƒbƒv‚ð’Ç‰Á‚·‚é‚±‚Æ–³‚­Š®—¹‚³‚ê‚éB‚»‚µ‚Ä‚±‚ÌŒðÂ‚ÍA(—v‹‚ª‚ ‚ê‚Î)ƒT[ƒo‚É‚»‚ê‚¼‚ê‚ÌƒvƒƒgƒRƒ‹‚Æ•ÊX‚ÌØ–¾‘‚ð‘Î‰ž•t‚¯‚³‚¹‚éŽ–‚ª‰Â”\‚Å‚ ‚éB
 
 ##<a name ="req-language"> 2</a>.—pŒê
 ‚±‚Ì•¶Í‚É‚¨‚¢‚ÄAƒL[ƒ[ƒh"MUST"A"MUST NOT"A"REQUIRED"A"SHALL"A"SHALL NOT"A"SHOULD"A"SHOULD NOT"A"RECOMMENDED"A"MAY"A‚»‚µ‚Ä "OPTIONAL"‚Í[RFC2119](https://tools.ietf.org/html/rfc2119)‚É•\‹L‚³‚ê‚é‚æ‚¤‚É‰ðŽß‚³‚ê‚éB
@@ -109,7 +109,7 @@ ALPN‚Å‚ÍAƒNƒ‰ƒCƒAƒ“ƒg‚ÍƒTƒ|[ƒg‚·‚éƒAƒvƒŠƒP[ƒVƒ‡ƒ“ƒvƒƒgƒRƒ‹‚ÌƒŠƒXƒg‚ðTLS‚ÌCli
 `"ProtocolNameList"`‚ÍŠm‚©‚Éˆê‚Â‚Ì`"ProtocolName"`‚ðŠÜ‚Ü‚È‚¯‚ê‚Î‚È‚ç‚È‚¢(MUST)‚±‚Æ‚ðœ‚«A`("application_layer_protocol_nagotiation(16)")`Šg’£‚Ì`"extension_data"`—Ìˆæ‚Íã‹Lclient‚Ì`"extension_data"`‚Æ“¯—l‚É\¬‚³‚ê‚éB
 
 
-]‚Á‚ÄAClientHello‚ÆServerHelloƒƒbƒZ[ƒW“à‚Ì`"application_layer_protocol_nagotiation"`Šg’£‚ðŽ‚ÂŠ®‘S‚Èƒnƒ“ƒhƒVƒFƒCƒN‚ÍŽŸ‚Ì—¬‚ê‚ðs‚¤([[RFC5246]7.3ß](https://tools.ietf.org/html/rfc5246#section-7.3)‚Æ‘ÎÆ“I‚É)
+]‚Á‚ÄAClientHello‚ÆServerHelloƒƒbƒZ[ƒW“à‚Ì`"application_layer_protocol_nagotiation"`Šg’£‚ðŽ‚ÂŠ®‘S‚Èƒnƒ“ƒhƒVƒFƒCƒN‚Í([[RFC5246]7.3ß](https://tools.ietf.org/html/rfc5246#section-7.3)‚Æ‘ÎÆ“I‚É)ŽŸ‚Ì—¬‚ê‚ðs‚¤B
 
 
     Client															Server
@@ -137,6 +137,7 @@ ALPN‚Å‚ÍAƒNƒ‰ƒCƒAƒ“ƒg‚ÍƒTƒ|[ƒg‚·‚éƒAƒvƒŠƒP[ƒVƒ‡ƒ“ƒvƒƒgƒRƒ‹‚ÌƒŠƒXƒg‚ðTLS‚ÌCli
 *‚ÍƒIƒvƒVƒ‡ƒ“‚à‚µ‚­‚Íó‹µ‚É‚æ‚éƒƒbƒZ[ƒW‚Å‚ ‚èAí‚É‘—‚ç‚ê‚é‚í‚¯‚Å‚Í‚È‚¢B
 
 
+
 `"application_layer_protocol_negotiation"`Šg’£‚ÍÈ—ª‚³‚ê‚½ƒnƒ“ƒhƒVƒFƒCƒNŽŸ‚Ì‚æ‚¤‚É‚È‚éB
 
     Client															Server
@@ -161,7 +162,7 @@ ALPN‚Å‚ÍAƒNƒ‰ƒCƒAƒ“ƒg‚ÍƒTƒ|[ƒg‚·‚éƒAƒvƒŠƒP[ƒVƒ‡ƒ“ƒvƒƒgƒRƒ‹‚ÌƒŠƒXƒg‚ðTLS‚ÌCli
 
 ###<a name ="pro-selection"> 3.2</a>. ƒvƒƒgƒRƒ‹‚Ì‘I‘ð
 ƒT[ƒo‚Í—Dæ‡‚ÅƒTƒ|[ƒg‚·‚éƒvƒƒgƒRƒ‹‚ÌƒŠƒXƒg‚ðŽ‚Â‚±‚Æ‚ðŠú‘Ò‚³‚êAƒNƒ‰ƒCƒAƒ“ƒg‚ªƒTƒ|[ƒg‚·‚é1‚Â‚ÌƒvƒƒgƒRƒ‹‚ª‘I‚Î‚ê‚éB
-‚»‚Ìê‡AƒT[ƒo‚ÍƒNƒ‰ƒCƒAƒ“ƒg‚©‚ç’ñŽ¦‚³‚ê‚½ƒŠƒXƒg‚Ì’†‚ÅƒTƒ|[ƒg‚·‚éˆê”Ô—Dæ“x‚Ì‚‚¢ƒvƒƒgƒRƒ‹‚ð‘I‘ð‚·‚é‚×‚«‚Å‚ ‚é(SHOULD)B
+‚»‚Ìê‡AƒT[ƒo‚ÍƒNƒ‰ƒCƒAƒ“ƒg‚©‚ç’ñŽ¦‚³‚ê‚½ƒŠƒXƒg‚Ì’†‚ÅAƒTƒ|[ƒg‚·‚éˆê”Ô—Dæ“x‚Ì‚‚¢ƒvƒƒgƒRƒ‹‚ð‘I‘ð‚·‚é‚×‚«‚Å‚ ‚é(SHOULD)B
 ƒNƒ‰ƒCƒAƒ“ƒg‚ª’ñŽ¦‚µ‚½ƒvƒƒgƒRƒ‹‚ðƒT[ƒo‚ª1‚Â‚àƒTƒ|[ƒg‚µ‚È‚¢ê‡AƒT[ƒo‚Í`"no_application_protocol"`‚ÌƒtƒFƒCƒ^ƒ‹ƒAƒ‰[ƒg‚Å‰ž“š‚·‚é(SHALL)B
 
 
@@ -172,13 +173,13 @@ ALPN‚Å‚ÍAƒNƒ‰ƒCƒAƒ“ƒg‚ÍƒTƒ|[ƒg‚·‚éƒAƒvƒŠƒP[ƒVƒ‡ƒ“ƒvƒƒgƒRƒ‹‚ÌƒŠƒXƒg‚ðTLS‚ÌCli
 
 
 ServerHello“à‚Ì`"application_layer_protocol_negotiation"`Šg’£ƒ^ƒCƒv‚É‚ ‚éŠÖŒW‚µ‚½ƒvƒƒgƒRƒ‹‚ÍÄ‚ÑŒðÂ‚³‚ê‚é‚Ü‚ÅƒRƒlƒNƒVƒ‡ƒ“‚Åˆê”ÔM—Š‚Å‚«‚é(SHALL)B
-ƒT[ƒo‚Í‘I‘ð‚³‚ê‚½ƒvƒƒgƒRƒ‹‚É‰ž“š‚µ‚È‚¢‚µAŒã‚ÉƒAƒvƒŠƒP[ƒVƒ‡ƒ“ƒf[ƒ^‚ÌŒðŠ·‚Éˆá‚¤ƒvƒƒgƒRƒ‹‚ðŽg‚¤‚±‚Æ‚à‚È‚¢(SHALL NOT)B
+ƒT[ƒo‚Í‘I‘ð‚³‚ê‚½ƒvƒƒgƒRƒ‹‚É‰ž“š‚µ‚È‚¢‚µAŒã‚ÉƒAƒvƒŠƒP[ƒVƒ‡ƒ“ƒf[ƒ^‚ÌŒðŠ·‚É•Ê‚ÌƒvƒƒgƒRƒ‹‚ðŽg‚¤‚±‚Æ‚à‚È‚¢(SHALL NOT)B
 
 
 ##<a name ="design"> 4</a>. ƒfƒUƒCƒ“‚Ìl—¶
 ALPNŠg’£‚ÍTLSƒvƒƒgƒRƒ‹Šg’£‚Ì‘ã•\“I‚ÈƒfƒUƒCƒ“‚É’Ç]‚·‚é‚æ‚¤ˆÓ}‚³‚ê‚Ä‚¢‚éB
 “Á‚ÉAŒðÂ‚ÍŠm—§‚³‚ê‚½TLSƒA[ƒLƒeƒNƒ`ƒƒ‚É]‚Á‚½ƒNƒ‰ƒCƒAƒ“ƒg/ƒT[ƒo‚ÌhelloŒðŠ·“à‚ÅŠ®‘S‚És‚í‚ê‚éB
-`"appliation_layer_protocol_negotiation"`‚ÌServerHelloŠg’£‚ÍiƒRƒlƒNƒVƒ‡ƒ“‚ªÄŒðÂ‚³‚ê‚é‚Ü‚ÅjƒRƒlƒNƒVƒ‡ƒ“‚Éˆê”ÔM—Š‚Å‚«‚é‚à‚Ì‚Æ‚³‚êATCP‚à‚µ‚­‚ÍUDPƒ|[ƒg”Ô†‚ª‚»‚ÌƒRƒlƒNƒVƒ‡ƒ“ã‚Å—p‚¢‚ç‚ê‚éƒAƒvƒŠƒP[ƒVƒ‡ƒ“‘wƒvƒƒgƒRƒ‹‚Åˆê”ÔM—Š‚Å‚«‚È‚¢Žž‚ÉAƒlƒbƒgƒ[ƒN—v‘f‚ªƒRƒlƒNƒVƒ‡ƒ“‚É‹æ•Ê‚³‚ê‚½ƒT[ƒrƒX‚ð’ñ‹Ÿ‚·‚é‚±‚Æ‚ð‹–‰Â‚·‚½‚ß‚ÉƒvƒŒ[ƒ“ƒeƒLƒXƒg‚Å‘—‚ç‚ê‚éB
+`"appliation_layer_protocol_negotiation"`‚ÌServerHelloŠg’£‚ÍiƒRƒlƒNƒVƒ‡ƒ“‚ªÄŒðÂ‚³‚ê‚é‚Ü‚ÅjƒRƒlƒNƒVƒ‡ƒ“‚Éˆê”ÔM—Š‚Å‚«‚é‚à‚Ì‚Æ‚³‚êATCP‚à‚µ‚­‚ÍUDPƒ|[ƒg”Ô†‚ª‚»‚ÌƒRƒlƒNƒVƒ‡ƒ“ã‚Å—p‚¢‚ç‚ê‚éƒAƒvƒŠƒP[ƒVƒ‡ƒ“‘wƒvƒƒgƒRƒ‹‚Åˆê”ÔM—Š‚Å‚«‚È‚¢Žž‚ÉAƒlƒbƒgƒ[ƒN—v‘f‚ªƒRƒlƒNƒVƒ‡ƒ“‚É‹æ•Ê‚³‚ê‚½ƒT[ƒrƒX‚Ì’ñ‹Ÿ‚ð‹–‰Â‚·‚é‚½‚ß‚ÉƒvƒŒ[ƒ“ƒeƒLƒXƒg‚Å‘—‚ç‚ê‚éB
 ƒvƒƒgƒRƒ‹‘I‘ð‚ÌŠ—LŒ ‚ðƒT[ƒo‚É’u‚­‚±‚Æ‚ÅAALPN‚ÍØ–¾‘I‘ð‚à‚µ‚­‚ÍƒRƒlƒNƒVƒ‡ƒ“ƒ‹[ƒeƒBƒ“ƒO‚ªŒðÂ‚³‚ê‚½ƒvƒƒgƒRƒ‹‚É‚æ‚éƒVƒiƒŠƒI‚ð‰~ŠŠ‚É‚·‚éB
 
 
@@ -192,7 +193,7 @@ ALPN‚ÍTLSƒRƒlƒNƒVƒ‡ƒ“‚ÆŒ‹‚Ñ•t‚¯‚ç‚ê‚½ƒAƒvƒŠƒP[ƒVƒ‡ƒ“‘wƒvƒƒgƒRƒ‹‚ÌŠO“I‚È‰ÂŽ‹ƒ}
 —ðŽj“I‚ÉAƒRƒlƒNƒVƒ‡ƒ“‚ÆŒ‹‚Ñ•t‚¯‚ç‚ê‚½ƒAƒvƒŠƒP[ƒVƒ‡ƒ“‘wƒvƒƒgƒRƒ‹‚ÍTCP‚à‚µ‚­‚ÍUDP‚ÅŽg‚í‚ê‚éƒ|[ƒg”Ô†‚©‚çŠm‚©‚ß‚ç‚ê‚é‚¾‚ë‚¤B
 
 
-V‚½‚ÈƒvƒƒgƒRƒ‹Ž¯•ÊŽq‚ð‰Á‚¦AƒvƒƒgƒRƒ‹Ž¯•ÊŽqƒŒƒWƒXƒgƒŠ‚ðŠg’£‚·‚é‚Â‚à‚è‚ÌŽÀ‘•ŽÒ‚ÆƒhƒLƒ…ƒƒ“ƒg•ÒvWŽÒ‚ÍATLS1.2ˆÈ‰º‚Å‚ÍƒNƒ‰ƒCƒAƒ“ƒg‚ª•½•¶‚Å‚»‚ÌŽ¯•ÊŽq‚ð‘—‚éŽ–‚ðl—¶‚·‚é‚×‚«‚¾B
+V‚½‚ÈƒvƒƒgƒRƒ‹Ž¯•ÊŽq‚ð‰Á‚¦AƒvƒƒgƒRƒ‹Ž¯•ÊŽqƒŒƒWƒXƒgƒŠ‚ðŠg’£‚·‚é‚Â‚à‚è‚ÌŽÀ‘•ŽÒ‚ÆƒhƒLƒ…ƒƒ“ƒg•ÒWŽÒ‚ÍATLS1.2ˆÈ‰º‚Å‚ÍƒNƒ‰ƒCƒAƒ“ƒg‚ª•½•¶‚Å‚»‚ÌŽ¯•ÊŽq‚ð‘—‚éŽ–‚ðl—¶‚·‚é‚×‚«‚¾B
 ‚Ü‚½AÅ’á‚Å‚àæ10”N‚Ù‚Ç‚Íƒuƒ‰ƒEƒU‚ªÅ‰‚ÌClientHello‚Å‚±‚ê‚ç‘Šú‚ÌTLS‚ð•’Ê‚ÉŽg‚¤Ž–‚ðl—¶‚·‚×‚«‚¾B
 
 
@@ -202,21 +203,21 @@ ALPN‚ÍTLSƒRƒlƒNƒVƒ‡ƒ“‚ÆŒ‹‚Ñ•t‚¯‚ç‚ê‚½ƒAƒvƒŠƒP[ƒVƒ‡ƒ“‘wƒvƒƒgƒRƒ‹‚ÌŠO“I‚È‰ÂŽ‹ƒ}
 
 
 ##<a name ="IANA"> 6</a>. IANA‚Ìl—¶
-IANA‚Í"ExtensionType Values"ƒŒƒWƒXƒgƒŠ‚ÍŽŸ‚ÌƒGƒ“ƒgƒŠ‚ðŠÜ‚ß‚é‚½‚ß‚ÉƒAƒbƒvƒf[ƒg‚µ‚½B
+IANA‚ÍŽŸ‚ÌƒGƒ“ƒgƒŠ‚ðŠÜ‚ß‚é‚½‚ß‚É"ExtensionType Values"ƒŒƒWƒXƒgƒŠ‚ðƒAƒbƒvƒf[ƒg‚µ‚½B
 
 
     16 application_layer_protocol_negotiation
 
 
-‚±‚Ì•¶Í‚Í"Transport Layer Security (TLS) Extensions"‚Æ‚¢‚¤ƒ^ƒCƒgƒ‹‚ª‘¶Ý‚·‚éŒ³‚ÅA"Application-Layer Protocol Negotiation (ALPN) Protocl IDs"‚Æƒ^ƒCƒgƒ‹‚Ì•t‚¢‚½ƒvƒƒgƒRƒ‹Ž¯•ÊŽq‚ÌƒŒƒWƒXƒgƒŠ‚ðŠm—§‚µ‚½B
+‚±‚Ì•¶Í‚Í`"Transport Layer Security (TLS) Extensions"`‚Æ‚¢‚¤ƒ^ƒCƒgƒ‹‚ª‘¶Ý‚·‚éŒ³‚ÅA`"Application-Layer Protocol Negotiation (ALPN) Protocl IDs"`‚Æƒ^ƒCƒgƒ‹‚Ì•t‚¢‚½ƒvƒƒgƒRƒ‹Ž¯•ÊŽq‚ÌƒŒƒWƒXƒgƒŠ‚ðŠm—§‚µ‚½B
 
 
 ‚±‚ÌƒŒƒWƒXƒgƒŠ‚É‚ ‚éƒGƒ“ƒgƒŠ‚ÍŽŸ‚Ì—Ìˆæ‚ð•K—v‚Æ‚·‚éB
 
 
-* Protocl: ƒvƒƒgƒRƒ‹–¼
-* Identification Sequence: ƒvƒƒgƒRƒ‹‚ðŽ¯•Ê‚·‚é³Šm‚ÈƒIƒNƒeƒbƒg‚Ì’l‚ÌW‡B‚±‚ê‚ÍƒvƒƒgƒRƒ‹–¼‚ÌUTF-8ƒGƒ“ƒR[ƒfƒBƒ“ƒO[RFC3629](https://tools.ietf.org/html/rfc3629)‚©‚à‚µ‚ê‚È‚¢B
-* Reference: ‚»‚ÌƒvƒƒgƒRƒ‹‚ð’è‹`‚·‚éŽd—l‚Ö‚ÌŽQÆ
+    * Protocl: ƒvƒƒgƒRƒ‹–¼
+    * Identification Sequence: ƒvƒƒgƒRƒ‹‚ðŽ¯•Ê‚·‚é³Šm‚ÈƒIƒNƒeƒbƒg‚Ì’l‚ÌW‡B‚±‚ê‚ÍƒvƒƒgƒRƒ‹–¼‚ÌUTF-8ƒGƒ“ƒR[ƒfƒBƒ“ƒO[RFC3629](https://tools.ietf.org/html/rfc3629)‚©‚à‚µ‚ê‚È‚¢B
+    * Reference: ‚»‚ÌƒvƒƒgƒRƒ‹‚ð’è‹`‚·‚éŽd—l‚Ö‚ÌŽQÆ
 
 
 ‚±‚ÌƒŒƒWƒXƒgƒŠ‚Í[RFC5226](https://tools.ietf.org/html/rfc5226)‚É’è‹`‚³‚ê‚Ä‚¢‚é‚æ‚¤‚É"Expert Review"ƒ|ƒŠƒV[‚ÌŒ³‚Å‹@”\‚µ‚Ä‚¢‚éB
