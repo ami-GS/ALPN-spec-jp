@@ -157,7 +157,7 @@ ALPNでは、クライアントはサポートするアプリケーションプロトコルのリストをTLSのCli
 
 ほか多数のTLS拡張と違い、これはコネクションだけのセッションのプロパティを確立しない。
 セッションの再開もしくはセッションチケット[RFC5077](https://tools.ietf.org/html/rfc5077)が用いられた時、この拡張の以前のコンテンツは不適切である。
-そして新たなハンドシェイクメッセージの値のみが考慮される
+そして新たなハンドシェイクメッセージの値のみが考慮される。
 
 
 ###<a name ="pro-selection"> 3.2</a>. プロトコルの選択
@@ -285,10 +285,10 @@ IANAは次のエントリを含めるために"ExtensionType Values"レジストリをアップデートし
 
 ## 9. 著者の連絡先
 
-Stephan Friedl
-Cisco Systems, Inc.
-170 West Tasman Drive
-San Jose, CA  95134
+Stephan Friedl  
+Cisco Systems, Inc.  
+170 West Tasman Drive  
+San Jose, CA  95134  
 USA
 
 
@@ -296,28 +296,28 @@ Phone: (720)562-6785
 EMail: sfriedl@cisco.com
 
 
-Andrei Popov
-Microsoft Corp.
-One Microsoft Way
-Redmond, WA  98052
+Andrei Popov  
+Microsoft Corp.  
+One Microsoft Way  
+Redmond, WA  98052  
 USA
 
 
 EMail: andreipo@microsoft.com
 
 
-Adam Langley
-Google Inc.
+Adam Langley  
+Google Inc.  
 USA
+
 
 EMail: agl@google.com
 
 
-Emile Stephan
-Orange
-2 avenue Pierre Marzin
-Lannion  F-22307
+Emile Stephan  
+Orange  
+2 avenue Pierre Marzin  
+Lannion  F-22307  
 France
 
 EMail: emile.stephan@orange.com
-   
