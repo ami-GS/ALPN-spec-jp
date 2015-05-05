@@ -51,9 +51,9 @@ described in the Simplified BSD License.
 ##### [3](#ALPN).ƒAƒvƒŠƒP[ƒVƒ‡ƒ“‘wƒvƒƒgƒRƒ‹ŒðÂ
 ###### [3.1](#ALPN-E).ƒAƒvƒŠƒP[ƒVƒ‡ƒ“‘wƒvƒƒgƒRƒ‹ŒðÂŠg’£
 ###### [3.2](#pro-selection).ƒvƒƒgƒRƒ‹‚Ì‘I‘ð
-##### [4](#design).ƒfƒUƒCƒ“‚Ìl—¶
-##### [5](#security).ƒZƒLƒ…ƒŠƒeƒB‚Ìl—¶
-##### [6](#IANA).IANA‚Ìl—¶
+##### [4](#design).ƒfƒUƒCƒ“‚Ì”z—¶
+##### [5](#security).ƒZƒLƒ…ƒŠƒeƒB‚Ì”z—¶
+##### [6](#IANA).IANA‚Ì”z—¶
 ##### [7](#acknowledge).ŽÓŽ«
 ##### [8](#reference).ŽQl•¶Œ£
 ###### [8.1](#normative-ref).ˆø—p•¶‘
@@ -100,7 +100,7 @@ ALPN‚Å‚ÍAƒNƒ‰ƒCƒAƒ“ƒg‚ÍƒTƒ|[ƒg‚·‚éƒAƒvƒŠƒP[ƒVƒ‡ƒ“ƒvƒƒgƒRƒ‹‚ÌƒŠƒXƒg‚ðTLS‚ÌCli
 
 
 `"ProtocolNameList"`‚ÍƒNƒ‰ƒCƒAƒ“ƒg‚©‚ç’m‚³‚ê‚½D‚Ý‚Ì~‡‚ÌƒvƒƒgƒRƒ‹‚ÌƒŠƒXƒg‚ðŠÜ‚ÞB
-ƒvƒƒgƒRƒ‹‚Í[‚Uß](#IANA)("IANA‚Ìl—¶")‚É‚ÄÚ×‚Éà–¾‚³‚ê‚Ä‚¢‚é‚æ‚¤‚ÉAIANA-registered‚É‚¨‚¢‚Ä–¼‘O•t‚¯‚ç‚êA•s–¾—Ä‚ÅA‹ó‚Å‚È‚¢ƒoƒCƒg•¶Žš—ñ‚Å‚ ‚éB
+ƒvƒƒgƒRƒ‹‚Í[‚Uß](#IANA)("IANA‚Ì”z—¶")‚É‚ÄÚ×‚Éà–¾‚³‚ê‚Ä‚¢‚é‚æ‚¤‚ÉAIANA-registered‚É‚¨‚¢‚Ä–¼‘O•t‚¯‚ç‚êA•s–¾—Ä‚ÅA‹ó‚Å‚È‚¢ƒoƒCƒg•¶Žš—ñ‚Å‚ ‚éB
 ‹ó‚Ì•¶Žš—ñ‚ÍŠÜ‚Ü‚ê‚é‚×‚«‚Å‚È‚­A‚³‚ç‚ÉƒoƒCƒg•¶Žš—ñ‚ÍØ‚è‹l‚ß‚ç‚ê‚é‚×‚«‚Å‚È‚¢B
 
 `"application_layer_protocol_nagotiation"`Šg’£‚ðŠÜ‚ÞClientHello‚ðŽó‚¯Žæ‚éƒT[ƒo‚ÍA“KØ‚É‘I‚Î‚ê‚½ƒvƒƒgƒRƒ‹‚ðŠÜ‚Þ‰ž“š‚ð•Ô‚µ‚Ä—Ç‚¢(MAY)B
@@ -176,7 +176,7 @@ ServerHello“à‚Ì`"application_layer_protocol_negotiation"`Šg’£ƒ^ƒCƒv‚É‚ ‚éŠÖŒW‚µ‚
 ƒT[ƒo‚Í‘I‘ð‚³‚ê‚½ƒvƒƒgƒRƒ‹‚É‰ž“š‚µ‚È‚¢‚µAŒã‚ÉƒAƒvƒŠƒP[ƒVƒ‡ƒ“ƒf[ƒ^‚ÌŒðŠ·‚É•Ê‚ÌƒvƒƒgƒRƒ‹‚ðŽg‚¤‚±‚Æ‚à‚È‚¢(SHALL NOT)B
 
 
-##<a name ="design"> 4</a>. ƒfƒUƒCƒ“‚Ìl—¶
+##<a name ="design"> 4</a>. ƒfƒUƒCƒ“‚Ì”z—¶
 ALPNŠg’£‚ÍTLSƒvƒƒgƒRƒ‹Šg’£‚Ì‘ã•\“I‚ÈƒfƒUƒCƒ“‚É’Ç]‚·‚é‚æ‚¤ˆÓ}‚³‚ê‚Ä‚¢‚éB
 “Á‚ÉAŒðÂ‚ÍŠm—§‚³‚ê‚½TLSƒA[ƒLƒeƒNƒ`ƒƒ‚É]‚Á‚½ƒNƒ‰ƒCƒAƒ“ƒg/ƒT[ƒo‚ÌhelloŒðŠ·“à‚ÅŠ®‘S‚És‚í‚ê‚éB
 `"appliation_layer_protocol_negotiation"`‚ÌServerHelloŠg’£‚ÍiƒRƒlƒNƒVƒ‡ƒ“‚ªÄŒðÂ‚³‚ê‚é‚Ü‚ÅjƒRƒlƒNƒVƒ‡ƒ“‚Éˆê”ÔM—Š‚Å‚«‚é‚à‚Ì‚Æ‚³‚êATCP‚à‚µ‚­‚ÍUDPƒ|[ƒg”Ô†‚ª‚»‚ÌƒRƒlƒNƒVƒ‡ƒ“ã‚Å—p‚¢‚ç‚ê‚éƒAƒvƒŠƒP[ƒVƒ‡ƒ“‘wƒvƒƒgƒRƒ‹‚Åˆê”ÔM—Š‚Å‚«‚È‚¢Žž‚ÉAƒlƒbƒgƒ[ƒN—v‘f‚ªƒRƒlƒNƒVƒ‡ƒ“‚É‹æ•Ê‚³‚ê‚½ƒT[ƒrƒX‚Ì’ñ‹Ÿ‚ð‹–‰Â‚·‚é‚½‚ß‚ÉƒvƒŒ[ƒ“ƒeƒLƒXƒg‚Å‘—‚ç‚ê‚éB
@@ -187,13 +187,13 @@ ALPNŠg’£‚ÍTLSƒvƒƒgƒRƒ‹Šg’£‚Ì‘ã•\“I‚ÈƒfƒUƒCƒ“‚É’Ç]‚·‚é‚æ‚¤ˆÓ}‚³‚ê‚Ä‚¢‚éB
 ‚à‚µƒvƒƒgƒRƒ‹‚Ì‰B•Á‚ª•K—v‚Å‚ ‚ê‚ÎA^‚ÌTLSƒZƒLƒ…ƒŠƒeƒB•ÛØ‚Ìˆ×‚ÉƒRƒlƒNƒVƒ‡ƒ“Šm—§‚ÌŒã‚ÉÄŒðÂ‚·‚é‚Ì‚ªD‚Ü‚µ‚¢Žè‡‚¾‚ë‚¤B
 
 
-##<a name ="security"> 5</a>. ƒZƒLƒ…ƒŠƒeƒB‚Ìl—¶
+##<a name ="security"> 5</a>. ƒZƒLƒ…ƒŠƒeƒB‚Ì”z—¶
 ALPNŠg’£‚ÍTLS‚ÌƒZƒbƒVƒ‡ƒ“Šm—§‚à‚µ‚­‚ÍƒAƒvƒŠƒP[ƒVƒ‡ƒ“ƒf[ƒ^‚ÌŒðŠ·‚ÉƒZƒLƒ…ƒŠƒeƒB‚É‰e‹¿‚ð—^‚¦‚È‚¢B
 ALPN‚ÍTLSƒRƒlƒNƒVƒ‡ƒ“‚ÆŒ‹‚Ñ•t‚¯‚ç‚ê‚½ƒAƒvƒŠƒP[ƒVƒ‡ƒ“‘wƒvƒƒgƒRƒ‹‚ÌŠO“I‚È‰ÂŽ‹ƒ}[ƒN‚ð’ñ‹Ÿ‚·‚é–ðŠ„‚ð‰Ê‚½‚·B
 —ðŽj“I‚ÉAƒRƒlƒNƒVƒ‡ƒ“‚ÆŒ‹‚Ñ•t‚¯‚ç‚ê‚½ƒAƒvƒŠƒP[ƒVƒ‡ƒ“‘wƒvƒƒgƒRƒ‹‚ÍTCP‚à‚µ‚­‚ÍUDP‚ÅŽg‚í‚ê‚éƒ|[ƒg”Ô†‚©‚çŠm‚©‚ß‚ç‚ê‚é‚¾‚ë‚¤B
 
 
-V‚½‚ÈƒvƒƒgƒRƒ‹Ž¯•ÊŽq‚ð‰Á‚¦AƒvƒƒgƒRƒ‹Ž¯•ÊŽqƒŒƒWƒXƒgƒŠ‚ðŠg’£‚·‚é‚Â‚à‚è‚ÌŽÀ‘•ŽÒ‚ÆƒhƒLƒ…ƒƒ“ƒg•ÒWŽÒ‚ÍATLS1.2ˆÈ‰º‚Å‚ÍƒNƒ‰ƒCƒAƒ“ƒg‚ª•½•¶‚Å‚»‚ÌŽ¯•ÊŽq‚ð‘—‚éŽ–‚ðl—¶‚·‚é‚×‚«‚¾B
+V‚½‚ÈƒvƒƒgƒRƒ‹Ž¯•ÊŽq‚ð‰Á‚¦AƒvƒƒgƒRƒ‹Ž¯•ÊŽqƒŒƒWƒXƒgƒŠ‚ðŠg’£‚·‚é‚Â‚à‚è‚ÌŽÀ‘•ŽÒ‚ÆƒhƒLƒ…ƒƒ“ƒg•ÒWŽÒ‚ÍATLS1.2ˆÈ‰º‚Å‚ÍƒNƒ‰ƒCƒAƒ“ƒg‚ª•½•¶‚Å‚»‚ÌŽ¯•ÊŽq‚ð‘—‚éŽ–‚ðl—¶‚·‚é‚×‚«‚Å‚ ‚éB
 ‚Ü‚½AÅ’á‚Å‚àæ10”N‚Ù‚Ç‚Íƒuƒ‰ƒEƒU‚ªÅ‰‚ÌClientHello‚Å‚±‚ê‚ç‘Šú‚ÌTLS‚ð•’Ê‚ÉŽg‚¤Ž–‚ðl—¶‚·‚×‚«‚¾B
 
 
@@ -202,7 +202,7 @@ ALPN‚ÍTLSƒRƒlƒNƒVƒ‡ƒ“‚ÆŒ‹‚Ñ•t‚¯‚ç‚ê‚½ƒAƒvƒŠƒP[ƒVƒ‡ƒ“‘wƒvƒƒgƒRƒ‹‚ÌŠO“I‚È‰ÂŽ‹ƒ}
 ‚»‚µ‚Ä‚»‚Ì‚æ‚¤‚ÈƒvƒƒgƒRƒ‹Ž¯•ÊŽq‚É‚Â‚¢‚Äq‚×‚Ä‚¢‚é•¶Í‚Í‚»‚Ì‚æ‚¤‚ÈˆÀ‘S‚Å‚È‚¢Žd—l‚ð”ñ„§‚·‚×‚«‚Å‚ ‚é(SHOULD)B
 
 
-##<a name ="IANA"> 6</a>. IANA‚Ìl—¶
+##<a name ="IANA"> 6</a>. IANA‚Ì”z—¶
 IANA‚ÍŽŸ‚ÌƒGƒ“ƒgƒŠ‚ðŠÜ‚ß‚é‚½‚ß‚É"ExtensionType Values"ƒŒƒWƒXƒgƒŠ‚ðƒAƒbƒvƒf[ƒg‚µ‚½B
 
 
